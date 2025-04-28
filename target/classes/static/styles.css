@@ -1,0 +1,45 @@
+/* Custom form styling */
+form {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Page headings */
+h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Patient profile card */
+.card {
+    border: 1px solid #dee2e6;
+    background-color: #ffffff;
+}
+
+/* Medication table */
+.table {
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+/* Margin for top content */
+.container {
+    margin-top: 60px;
+}
+
+/* Field spacing */
+.mb-3 label {
+    font-weight: 500;
+}

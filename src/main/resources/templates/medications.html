@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" th:href="@{/css/styles.css}">
+<body>
+<div class="container mt-5">
+    <h2>Manage Medications</h2>
+
+    <form action="#" th:action="@{/medications}" method="post" class="mt-4">
+        <div class="mb-3">
+            <label>Patient ID</label>
+            <input type="number" name="patientId" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label>Medication Name</label>
+            <input type="text" name="name" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label>Dosage</label>
+            <input type="text" name="dosage" class="form-control" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add Medication</button>
+    </form>
+
+    <hr>
+    <h4 class="mt-4">Medication List</h4>
+    <table class="table table-striped mt-2">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Dosage</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="medication : ${medications}">
+            <td th:text="${medication.id}"></td>
+            <td th:text="${medication.name}"></td>
+            <td th:text="${medication.dosage}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
